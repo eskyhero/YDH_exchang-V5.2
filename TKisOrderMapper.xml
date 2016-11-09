@@ -1,0 +1,211 @@
+﻿<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE sqlMap PUBLIC "-//ibatis.apache.org//DTD SQL Map 2.0//EN"
+        "http://ibatis.apache.org/dtd/sql-map-2.dtd">
+
+<sqlMap namespace="KisSaleBill">
+    <typeAlias alias="Order" type="com.ircloud.ydh.sdk4j.model.Order"/>
+    <typeAlias alias="OrderDetail" type="com.ircloud.ydh.sdk4j.model.OrderDetail"/>
+
+   <sql id="Base_Columns">
+    FInterID, 
+	FBillNo, 
+	FBrNo, 
+	FTranType, 
+	FCancellation, 
+	FStatus, 
+	FDiscountType, 
+	Fdate, 
+	FSaleStyle, 
+	FFetchStyle, 
+	FCurrencyID, 
+	FCustID, 
+	FFetchAdd, 
+	FCheckDate, 
+	FMangerID, 
+	FDeptID, 
+	FEmpID, 
+	FBillerID, 
+	FSettleID, 
+	FExchangeRate, 
+	FMultiCheckDate1, 
+	FMultiCheckDate2, 
+	FMultiCheckDate3, 
+	FMultiCheckDate4, 
+	FMultiCheckDate5, 
+	FMultiCheckDate6, 
+	FPOOrdBillNo, 
+	FRelateBrID, 
+	FTransitAheadTime, 
+	FImport, 
+	FSelTranType, 
+	FBrID, 
+	FSettleDate, 
+	FExplanation, 
+	FAreaPS 
+  </sql>
+  
+  <sql id="Detail_Base_Columns">
+    FInterID, 
+	FEntryID, 
+	FBrNo, 
+	FMapNumber, 
+	FMapName, 
+	FItemID, 
+	FAuxPropID, 
+	FQty, 
+	FUnitID, 
+	Fauxqty, 
+	FSecCoefficient, 
+	FSecQty, 
+	Fauxprice, 
+	FAuxTaxPrice, 
+	Famount, 
+	FCess, 
+	FTaxRate, 
+	FUniDiscount, 
+	FTaxAmount, 
+	FAuxPriceDiscount, 
+	FTaxAmt, 
+	FAllAmount, 
+	FTranLeadTime, 
+	FInForecast, 
+	FDate, 
+	Fnote	
+  </sql>
+
+    <insert id="saveOrder" parameterClass="Order">
+       insert into SEOrder(<include refid="Base_Columns"/>)
+       select
+				(select top 1 MAX(MaxOrderID) from YDH_Max_OrderID),
+				#orderNum#,
+				'0',
+				81,
+				0,
+				0,
+				0,
+				(select CONVERT(char,#createTime#,23)),
+				101,
+				'',
+				1,
+				isnull((Select FItemID FROM T_Organization where FNumber=#customer.code#),'000'),
+				'',
+				Null,
+				0,
+				310,
+				67901,
+				16548,
+				0,
+				1,
+				Null,
+				Null,
+				Null,
+				Null,
+				Null,
+				Null,
+				'',
+				0,
+				'3',
+				0,
+				0,
+				0,
+				(select CONVERT(char,#createTime#,23)),
+				'',
+				20302
+    </insert>
+    
+    <insert id="saveOrderDetail" parameterClass="OrderDetail">
+       insert into SEOrderEntry(<include refid="Detail_Base_Columns"/>)
+       select
+				(select FInterID from  SEOrder where FBillNo = #orderNum#),
+				isnull((select MAX(FEntryID)+1 from SEOrderEntry where FInterID = (select FInterID from  SEOrder where FBillNo = #orderNum#)),1),
+				'0',
+				'',
+				'',
+				isnull((select FItemID from t_ICItemCore where FNumber = #productCode#),0),
+				0,
+				#count#,
+				isnull((select FUnitID from T_ICItemBase where FItemID = (select FItemID from t_ICItemCore where FNumber = #productCode#)),0),
+				#count#,
+				0,
+				0,
+				#price#,
+				#price#,
+				#money#*100/117,
+				17.00,
+				0,
+				0,
+				0,
+				#price#,
+				#money#*17/117,
+				#money#,
+				'',
+				0,
+				(select CONVERT(char,getdate(),23)),
+				#productRemark#
+    </insert>
+    
+    
+    <!-- 保存退货单 -->
+ 	<insert id="saveReturnOrder" parameterClass="Order">
+ 	
+ 	</insert>
+ 	
+    <insert id="saveReturnOrderDetail" parameterClass="OrderDetail">
+          
+    </insert>
+    
+    <!-- 删除订货单 -->
+    <update id="deleteOrders" parameterClass="java.util.List">
+      DELETE FROM SEOrder WHERE FBillNo in
+      <iterate conjunction="," open="(" close=")">
+         #list[].orderNum#
+      </iterate>
+    </update>   
+    
+    <update id="deleteOrderDetails" parameterClass="java.util.List">
+      DELETE FROM SEOrderEntry WHERE FInterID in (select FInterID from SEOrder where FBillNo in
+	      <iterate conjunction="," open="(" close=")">
+	         #list[].orderNum#	         
+	      </iterate>
+	  )
+    </update>
+    <!-- 删除退货单 -->
+	<update id="deleteReturnOrders" parameterClass="java.util.List">
+      DELETE FROM t_sale_bill WHERE FORDERNUM in
+      <iterate conjunction="," open="(" close=")">
+         #list[].orderNum#
+      </iterate>
+    </update>   
+    
+    <update id="deleteReturnOrderDetails" parameterClass="java.util.List">
+      DELETE FROM t_sale_bill_detail WHERE FID in (select FID from t_sale_bill where FORDERNUM in
+	      <iterate conjunction="," open="(" close=")">
+	         #list[].orderNum#	         
+	      </iterate>
+	  )
+    </update>
+    
+<!--     <parameterMap id="procedureMap" class="java.util.Map" >
+         <parameter property="id" mode="OUT" jdbcType="VARCHAR" javaType="java.lang.String"/>
+    </parameterMap> -->
+    
+	
+<!-- 	<select id="excuteProcedureBeforeInsert" parameterMap="procedureMap" resultClass="java.lang.String">
+		 exec GetICMaxNum 'SEOrder',#id#,1,16398
+	</select> -->
+	<!-- 执行存储过程（插入前） -->
+	<select id="excuteProcedureBeforeInsert" parameterClass="Order">
+		 exec Gte_YDHOrder_MaxID
+	</select>
+	
+	<!-- 得到最大 id -->
+	<select id="getMaxId" resultClass="java.lang.Integer">
+		
+	</select>
+	
+	
+    <!-- 执行存储过程（插入后） -->
+	<select id="excuteProcedure" parameterClass="Order">
+	    CALL insertParameter(#orderNum#)
+	</select>
+    
+</sqlMap>

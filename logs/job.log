@@ -1,0 +1,354 @@
+2016-10-31 20:06:01 - [40887] - [ERROR] - com.ircloud.ydh.exchange.job.AbstractJob -OrderServiceTemplate.java(75) -订单插入失败，失败订单：DH-O-20161103-073189SqlMapClient operation; bad SQL grammar []; nested exception is com.ibatis.common.jdbc.exception.NestedSQLException:   
+--- The error occurred in com/ircloud/ydh/exchange/sql/mapper/kis/TKisOrderMapper.xml.  
+--- The error occurred while applying a parameter map.  
+--- Check the KisSaleBill.saveOrder-InlineParameterMap.  
+--- Check the statement (update failed).  
+--- Cause: java.sql.SQLException: 列名 'FPrintCount' 无效。
+  2016-10-31 20:06:01 - [40959] - [ERROR] - com.ircloud.ydh.exchange.job.AbstractJob -OrderServiceTemplate.java(75) -订单插入失败，失败订单：DH-O-20161103-061213SqlMapClient operation; bad SQL grammar []; nested exception is com.ibatis.common.jdbc.exception.NestedSQLException:   
+--- The error occurred in com/ircloud/ydh/exchange/sql/mapper/kis/TKisOrderMapper.xml.  
+--- The error occurred while applying a parameter map.  
+--- Check the KisSaleBill.saveOrder-InlineParameterMap.  
+--- Check the statement (update failed).  
+--- Cause: java.sql.SQLException: 列名 'FPrintCount' 无效。
+  2016-10-31 20:08:02 - [54584] - [ERROR] - com.ircloud.ydh.exchange.job.AbstractJob -OrderServiceTemplate.java(75) -订单插入失败，失败订单：DH-O-20161103-073189SqlMapClient operation; bad SQL grammar []; nested exception is com.ibatis.common.jdbc.exception.NestedSQLException:   
+--- The error occurred in com/ircloud/ydh/exchange/sql/mapper/kis/TKisOrderMapper.xml.  
+--- The error occurred while applying a parameter map.  
+--- Check the KisSaleBill.saveOrderDetail-InlineParameterMap.  
+--- Check the statement (update failed).  
+--- Cause: java.sql.SQLException: 列名 'FPlanMode' 无效。
+  2016-10-31 20:08:02 - [54739] - [ERROR] - com.ircloud.ydh.exchange.job.AbstractJob -OrderServiceTemplate.java(75) -订单插入失败，失败订单：DH-O-20161103-061213SqlMapClient operation; bad SQL grammar []; nested exception is com.ibatis.common.jdbc.exception.NestedSQLException:   
+--- The error occurred in com/ircloud/ydh/exchange/sql/mapper/kis/TKisOrderMapper.xml.  
+--- The error occurred while applying a parameter map.  
+--- Check the KisSaleBill.saveOrderDetail-InlineParameterMap.  
+--- Check the statement (update failed).  
+--- Cause: java.sql.SQLException: 列名 'FPlanMode' 无效。
+  2016-10-31 20:12:01 - [34113] - [ERROR] - com.ircloud.ydh.exchange.job.AbstractJob -OrderServiceTemplate.java(75) -订单插入失败，失败订单：DH-O-20161103-073189SqlMapClient operation; bad SQL grammar []; nested exception is com.ibatis.common.jdbc.exception.NestedSQLException:   
+--- The error occurred in com/ircloud/ydh/exchange/sql/mapper/kis/TKisOrderMapper.xml.  
+--- The error occurred while applying a parameter map.  
+--- Check the KisSaleBill.saveOrderDetail-InlineParameterMap.  
+--- Check the statement (update failed).  
+--- Cause: java.sql.SQLException: 列名 'FMTONo' 无效。
+  2016-10-31 20:12:01 - [34192] - [ERROR] - com.ircloud.ydh.exchange.job.AbstractJob -OrderServiceTemplate.java(75) -订单插入失败，失败订单：DH-O-20161103-061213SqlMapClient operation; bad SQL grammar []; nested exception is com.ibatis.common.jdbc.exception.NestedSQLException:   
+--- The error occurred in com/ircloud/ydh/exchange/sql/mapper/kis/TKisOrderMapper.xml.  
+--- The error occurred while applying a parameter map.  
+--- Check the KisSaleBill.saveOrderDetail-InlineParameterMap.  
+--- Check the statement (update failed).  
+--- Cause: java.sql.SQLException: 列名 'FMTONo' 无效。
+  2016-10-31 20:19:00 - [270082] - [ERROR] - com.ircloud.ydh.exchange.job.AbstractJob -InventoryJob.java(85) -库存同步失败：502:YDH is down or being upgraded.
+  2016-10-31 20:29:00 - [870066] - [ERROR] - com.ircloud.ydh.exchange.job.AbstractJob -InventoryJob.java(85) -库存同步失败：502:YDH is down or being upgraded.
+  2016-10-31 20:37:00 - [92735] - [ERROR] - com.ircloud.ydh.exchange.job.AbstractJob -OrderServiceTemplate.java(75) -订单插入失败，失败订单：DH-O-20161103-060823SqlMapClient operation; bad SQL grammar []; nested exception is com.ibatis.common.jdbc.exception.NestedSQLException:   
+--- The error occurred in com/ircloud/ydh/exchange/sql/mapper/kis/TKisOrderMapper.xml.  
+--- The error occurred while applying a parameter map.  
+--- Check the KisSaleBill.excuteProcedureBeforeInsert-InlineParameterMap.  
+--- Check the statement (query failed).  
+--- Cause: java.sql.SQLException: 找不到存储过程 'Gte_YDHOrder_MaxID'。
+  2016-10-31 20:38:00 - [152511] - [ERROR] - com.ircloud.ydh.exchange.job.AbstractJob -OrderServiceTemplate.java(75) -订单插入失败，失败订单：DH-O-20161103-060823SqlMapClient operation; bad SQL grammar []; nested exception is com.ibatis.common.jdbc.exception.NestedSQLException:   
+--- The error occurred in com/ircloud/ydh/exchange/sql/mapper/kis/TKisOrderMapper.xml.  
+--- The error occurred while applying a parameter map.  
+--- Check the KisSaleBill.excuteProcedureBeforeInsert-InlineParameterMap.  
+--- Check the statement (query failed).  
+--- Cause: java.sql.SQLException: 找不到存储过程 'Gte_YDHOrder_MaxID'。
+  2016-10-31 20:39:00 - [212565] - [ERROR] - com.ircloud.ydh.exchange.job.AbstractJob -OrderServiceTemplate.java(75) -订单插入失败，失败订单：DH-O-20161103-060823SqlMapClient operation; bad SQL grammar []; nested exception is com.ibatis.common.jdbc.exception.NestedSQLException:   
+--- The error occurred in com/ircloud/ydh/exchange/sql/mapper/kis/TKisOrderMapper.xml.  
+--- The error occurred while applying a parameter map.  
+--- Check the KisSaleBill.excuteProcedureBeforeInsert-InlineParameterMap.  
+--- Check the statement (query failed).  
+--- Cause: java.sql.SQLException: 找不到存储过程 'Gte_YDHOrder_MaxID'。
+  2016-10-31 20:40:00 - [272457] - [ERROR] - com.ircloud.ydh.exchange.job.AbstractJob -OrderServiceTemplate.java(75) -订单插入失败，失败订单：DH-O-20161103-060823SqlMapClient operation; bad SQL grammar []; nested exception is com.ibatis.common.jdbc.exception.NestedSQLException:   
+--- The error occurred in com/ircloud/ydh/exchange/sql/mapper/kis/TKisOrderMapper.xml.  
+--- The error occurred while applying a parameter map.  
+--- Check the KisSaleBill.excuteProcedureBeforeInsert-InlineParameterMap.  
+--- Check the statement (query failed).  
+--- Cause: java.sql.SQLException: 找不到存储过程 'Gte_YDHOrder_MaxID'。
+  2016-10-31 20:41:00 - [332459] - [ERROR] - com.ircloud.ydh.exchange.job.AbstractJob -OrderServiceTemplate.java(75) -订单插入失败，失败订单：DH-O-20161103-060823SqlMapClient operation; bad SQL grammar []; nested exception is com.ibatis.common.jdbc.exception.NestedSQLException:   
+--- The error occurred in com/ircloud/ydh/exchange/sql/mapper/kis/TKisOrderMapper.xml.  
+--- The error occurred while applying a parameter map.  
+--- Check the KisSaleBill.excuteProcedureBeforeInsert-InlineParameterMap.  
+--- Check the statement (query failed).  
+--- Cause: java.sql.SQLException: 找不到存储过程 'Gte_YDHOrder_MaxID'。
+  2016-10-31 20:42:00 - [392518] - [ERROR] - com.ircloud.ydh.exchange.job.AbstractJob -OrderServiceTemplate.java(75) -订单插入失败，失败订单：DH-O-20161103-060823SqlMapClient operation; bad SQL grammar []; nested exception is com.ibatis.common.jdbc.exception.NestedSQLException:   
+--- The error occurred in com/ircloud/ydh/exchange/sql/mapper/kis/TKisOrderMapper.xml.  
+--- The error occurred while applying a parameter map.  
+--- Check the KisSaleBill.excuteProcedureBeforeInsert-InlineParameterMap.  
+--- Check the statement (query failed).  
+--- Cause: java.sql.SQLException: 找不到存储过程 'Gte_YDHOrder_MaxID'。
+  2016-10-31 20:43:00 - [452442] - [ERROR] - com.ircloud.ydh.exchange.job.AbstractJob -OrderServiceTemplate.java(75) -订单插入失败，失败订单：DH-O-20161103-060823SqlMapClient operation; bad SQL grammar []; nested exception is com.ibatis.common.jdbc.exception.NestedSQLException:   
+--- The error occurred in com/ircloud/ydh/exchange/sql/mapper/kis/TKisOrderMapper.xml.  
+--- The error occurred while applying a parameter map.  
+--- Check the KisSaleBill.excuteProcedureBeforeInsert-InlineParameterMap.  
+--- Check the statement (query failed).  
+--- Cause: java.sql.SQLException: 找不到存储过程 'Gte_YDHOrder_MaxID'。
+  2016-10-31 20:44:00 - [512389] - [ERROR] - com.ircloud.ydh.exchange.job.AbstractJob -OrderServiceTemplate.java(75) -订单插入失败，失败订单：DH-O-20161103-060823SqlMapClient operation; bad SQL grammar []; nested exception is com.ibatis.common.jdbc.exception.NestedSQLException:   
+--- The error occurred in com/ircloud/ydh/exchange/sql/mapper/kis/TKisOrderMapper.xml.  
+--- The error occurred while applying a parameter map.  
+--- Check the KisSaleBill.excuteProcedureBeforeInsert-InlineParameterMap.  
+--- Check the statement (query failed).  
+--- Cause: java.sql.SQLException: 找不到存储过程 'Gte_YDHOrder_MaxID'。
+  2016-10-31 20:45:00 - [572424] - [ERROR] - com.ircloud.ydh.exchange.job.AbstractJob -OrderServiceTemplate.java(75) -订单插入失败，失败订单：DH-O-20161103-060823SqlMapClient operation; bad SQL grammar []; nested exception is com.ibatis.common.jdbc.exception.NestedSQLException:   
+--- The error occurred in com/ircloud/ydh/exchange/sql/mapper/kis/TKisOrderMapper.xml.  
+--- The error occurred while applying a parameter map.  
+--- Check the KisSaleBill.excuteProcedureBeforeInsert-InlineParameterMap.  
+--- Check the statement (query failed).  
+--- Cause: java.sql.SQLException: 找不到存储过程 'Gte_YDHOrder_MaxID'。
+  2016-10-31 20:46:00 - [632415] - [ERROR] - com.ircloud.ydh.exchange.job.AbstractJob -OrderServiceTemplate.java(75) -订单插入失败，失败订单：DH-O-20161103-060823SqlMapClient operation; bad SQL grammar []; nested exception is com.ibatis.common.jdbc.exception.NestedSQLException:   
+--- The error occurred in com/ircloud/ydh/exchange/sql/mapper/kis/TKisOrderMapper.xml.  
+--- The error occurred while applying a parameter map.  
+--- Check the KisSaleBill.excuteProcedureBeforeInsert-InlineParameterMap.  
+--- Check the statement (query failed).  
+--- Cause: java.sql.SQLException: 找不到存储过程 'Gte_YDHOrder_MaxID'。
+  2016-10-31 20:47:00 - [692435] - [ERROR] - com.ircloud.ydh.exchange.job.AbstractJob -OrderServiceTemplate.java(75) -订单插入失败，失败订单：DH-O-20161103-060823SqlMapClient operation; bad SQL grammar []; nested exception is com.ibatis.common.jdbc.exception.NestedSQLException:   
+--- The error occurred in com/ircloud/ydh/exchange/sql/mapper/kis/TKisOrderMapper.xml.  
+--- The error occurred while applying a parameter map.  
+--- Check the KisSaleBill.excuteProcedureBeforeInsert-InlineParameterMap.  
+--- Check the statement (query failed).  
+--- Cause: java.sql.SQLException: 找不到存储过程 'Gte_YDHOrder_MaxID'。
+  2016-10-31 20:48:00 - [752416] - [ERROR] - com.ircloud.ydh.exchange.job.AbstractJob -OrderServiceTemplate.java(75) -订单插入失败，失败订单：DH-O-20161103-060823SqlMapClient operation; bad SQL grammar []; nested exception is com.ibatis.common.jdbc.exception.NestedSQLException:   
+--- The error occurred in com/ircloud/ydh/exchange/sql/mapper/kis/TKisOrderMapper.xml.  
+--- The error occurred while applying a parameter map.  
+--- Check the KisSaleBill.excuteProcedureBeforeInsert-InlineParameterMap.  
+--- Check the statement (query failed).  
+--- Cause: java.sql.SQLException: 找不到存储过程 'Gte_YDHOrder_MaxID'。
+  2016-10-31 20:49:00 - [812390] - [ERROR] - com.ircloud.ydh.exchange.job.AbstractJob -OrderServiceTemplate.java(75) -订单插入失败，失败订单：DH-O-20161103-060823SqlMapClient operation; bad SQL grammar []; nested exception is com.ibatis.common.jdbc.exception.NestedSQLException:   
+--- The error occurred in com/ircloud/ydh/exchange/sql/mapper/kis/TKisOrderMapper.xml.  
+--- The error occurred while applying a parameter map.  
+--- Check the KisSaleBill.excuteProcedureBeforeInsert-InlineParameterMap.  
+--- Check the statement (query failed).  
+--- Cause: java.sql.SQLException: 找不到存储过程 'Gte_YDHOrder_MaxID'。
+  2016-10-31 20:50:00 - [872398] - [ERROR] - com.ircloud.ydh.exchange.job.AbstractJob -OrderServiceTemplate.java(75) -订单插入失败，失败订单：DH-O-20161103-060823SqlMapClient operation; bad SQL grammar []; nested exception is com.ibatis.common.jdbc.exception.NestedSQLException:   
+--- The error occurred in com/ircloud/ydh/exchange/sql/mapper/kis/TKisOrderMapper.xml.  
+--- The error occurred while applying a parameter map.  
+--- Check the KisSaleBill.excuteProcedureBeforeInsert-InlineParameterMap.  
+--- Check the statement (query failed).  
+--- Cause: java.sql.SQLException: 找不到存储过程 'Gte_YDHOrder_MaxID'。
+  2016-10-31 20:51:00 - [932451] - [ERROR] - com.ircloud.ydh.exchange.job.AbstractJob -OrderServiceTemplate.java(75) -订单插入失败，失败订单：DH-O-20161103-060823SqlMapClient operation; bad SQL grammar []; nested exception is com.ibatis.common.jdbc.exception.NestedSQLException:   
+--- The error occurred in com/ircloud/ydh/exchange/sql/mapper/kis/TKisOrderMapper.xml.  
+--- The error occurred while applying a parameter map.  
+--- Check the KisSaleBill.excuteProcedureBeforeInsert-InlineParameterMap.  
+--- Check the statement (query failed).  
+--- Cause: java.sql.SQLException: 找不到存储过程 'Gte_YDHOrder_MaxID'。
+  2016-10-31 20:52:00 - [992407] - [ERROR] - com.ircloud.ydh.exchange.job.AbstractJob -OrderServiceTemplate.java(75) -订单插入失败，失败订单：DH-O-20161103-060823SqlMapClient operation; bad SQL grammar []; nested exception is com.ibatis.common.jdbc.exception.NestedSQLException:   
+--- The error occurred in com/ircloud/ydh/exchange/sql/mapper/kis/TKisOrderMapper.xml.  
+--- The error occurred while applying a parameter map.  
+--- Check the KisSaleBill.excuteProcedureBeforeInsert-InlineParameterMap.  
+--- Check the statement (query failed).  
+--- Cause: java.sql.SQLException: 找不到存储过程 'Gte_YDHOrder_MaxID'。
+  2016-10-31 20:53:00 - [1052447] - [ERROR] - com.ircloud.ydh.exchange.job.AbstractJob -OrderServiceTemplate.java(75) -订单插入失败，失败订单：DH-O-20161103-060823SqlMapClient operation; bad SQL grammar []; nested exception is com.ibatis.common.jdbc.exception.NestedSQLException:   
+--- The error occurred in com/ircloud/ydh/exchange/sql/mapper/kis/TKisOrderMapper.xml.  
+--- The error occurred while applying a parameter map.  
+--- Check the KisSaleBill.excuteProcedureBeforeInsert-InlineParameterMap.  
+--- Check the statement (query failed).  
+--- Cause: java.sql.SQLException: 找不到存储过程 'Gte_YDHOrder_MaxID'。
+  2016-10-31 20:54:00 - [1112426] - [ERROR] - com.ircloud.ydh.exchange.job.AbstractJob -OrderServiceTemplate.java(75) -订单插入失败，失败订单：DH-O-20161103-060823SqlMapClient operation; bad SQL grammar []; nested exception is com.ibatis.common.jdbc.exception.NestedSQLException:   
+--- The error occurred in com/ircloud/ydh/exchange/sql/mapper/kis/TKisOrderMapper.xml.  
+--- The error occurred while applying a parameter map.  
+--- Check the KisSaleBill.excuteProcedureBeforeInsert-InlineParameterMap.  
+--- Check the statement (query failed).  
+--- Cause: java.sql.SQLException: 找不到存储过程 'Gte_YDHOrder_MaxID'。
+  2016-10-31 20:55:00 - [1172496] - [ERROR] - com.ircloud.ydh.exchange.job.AbstractJob -OrderServiceTemplate.java(75) -订单插入失败，失败订单：DH-O-20161103-060823SqlMapClient operation; bad SQL grammar []; nested exception is com.ibatis.common.jdbc.exception.NestedSQLException:   
+--- The error occurred in com/ircloud/ydh/exchange/sql/mapper/kis/TKisOrderMapper.xml.  
+--- The error occurred while applying a parameter map.  
+--- Check the KisSaleBill.excuteProcedureBeforeInsert-InlineParameterMap.  
+--- Check the statement (query failed).  
+--- Cause: java.sql.SQLException: 找不到存储过程 'Gte_YDHOrder_MaxID'。
+  2016-10-31 20:56:00 - [1232874] - [ERROR] - com.ircloud.ydh.exchange.job.AbstractJob -OrderServiceTemplate.java(75) -订单插入失败，失败订单：DH-O-20161103-060823SqlMapClient operation; bad SQL grammar []; nested exception is com.ibatis.common.jdbc.exception.NestedSQLException:   
+--- The error occurred in com/ircloud/ydh/exchange/sql/mapper/kis/TKisOrderMapper.xml.  
+--- The error occurred while applying a parameter map.  
+--- Check the KisSaleBill.excuteProcedureBeforeInsert-InlineParameterMap.  
+--- Check the statement (query failed).  
+--- Cause: java.sql.SQLException: 找不到存储过程 'Gte_YDHOrder_MaxID'。
+  2016-10-31 20:57:00 - [1292512] - [ERROR] - com.ircloud.ydh.exchange.job.AbstractJob -OrderServiceTemplate.java(75) -订单插入失败，失败订单：DH-O-20161103-060823SqlMapClient operation; bad SQL grammar []; nested exception is com.ibatis.common.jdbc.exception.NestedSQLException:   
+--- The error occurred in com/ircloud/ydh/exchange/sql/mapper/kis/TKisOrderMapper.xml.  
+--- The error occurred while applying a parameter map.  
+--- Check the KisSaleBill.excuteProcedureBeforeInsert-InlineParameterMap.  
+--- Check the statement (query failed).  
+--- Cause: java.sql.SQLException: 找不到存储过程 'Gte_YDHOrder_MaxID'。
+  2016-10-31 20:58:00 - [1352524] - [ERROR] - com.ircloud.ydh.exchange.job.AbstractJob -OrderServiceTemplate.java(75) -订单插入失败，失败订单：DH-O-20161103-060823SqlMapClient operation; bad SQL grammar []; nested exception is com.ibatis.common.jdbc.exception.NestedSQLException:   
+--- The error occurred in com/ircloud/ydh/exchange/sql/mapper/kis/TKisOrderMapper.xml.  
+--- The error occurred while applying a parameter map.  
+--- Check the KisSaleBill.excuteProcedureBeforeInsert-InlineParameterMap.  
+--- Check the statement (query failed).  
+--- Cause: java.sql.SQLException: 找不到存储过程 'Gte_YDHOrder_MaxID'。
+  2016-10-31 20:59:00 - [1412596] - [ERROR] - com.ircloud.ydh.exchange.job.AbstractJob -OrderServiceTemplate.java(75) -订单插入失败，失败订单：DH-O-20161103-060823SqlMapClient operation; bad SQL grammar []; nested exception is com.ibatis.common.jdbc.exception.NestedSQLException:   
+--- The error occurred in com/ircloud/ydh/exchange/sql/mapper/kis/TKisOrderMapper.xml.  
+--- The error occurred while applying a parameter map.  
+--- Check the KisSaleBill.excuteProcedureBeforeInsert-InlineParameterMap.  
+--- Check the statement (query failed).  
+--- Cause: java.sql.SQLException: 找不到存储过程 'Gte_YDHOrder_MaxID'。
+  2016-10-31 21:00:00 - [1472579] - [ERROR] - com.ircloud.ydh.exchange.job.AbstractJob -OrderServiceTemplate.java(75) -订单插入失败，失败订单：DH-O-20161103-060823SqlMapClient operation; bad SQL grammar []; nested exception is com.ibatis.common.jdbc.exception.NestedSQLException:   
+--- The error occurred in com/ircloud/ydh/exchange/sql/mapper/kis/TKisOrderMapper.xml.  
+--- The error occurred while applying a parameter map.  
+--- Check the KisSaleBill.excuteProcedureBeforeInsert-InlineParameterMap.  
+--- Check the statement (query failed).  
+--- Cause: java.sql.SQLException: 找不到存储过程 'Gte_YDHOrder_MaxID'。
+  2016-10-31 21:01:00 - [1532599] - [ERROR] - com.ircloud.ydh.exchange.job.AbstractJob -OrderServiceTemplate.java(75) -订单插入失败，失败订单：DH-O-20161103-060823SqlMapClient operation; bad SQL grammar []; nested exception is com.ibatis.common.jdbc.exception.NestedSQLException:   
+--- The error occurred in com/ircloud/ydh/exchange/sql/mapper/kis/TKisOrderMapper.xml.  
+--- The error occurred while applying a parameter map.  
+--- Check the KisSaleBill.excuteProcedureBeforeInsert-InlineParameterMap.  
+--- Check the statement (query failed).  
+--- Cause: java.sql.SQLException: 找不到存储过程 'Gte_YDHOrder_MaxID'。
+  2016-10-31 21:02:00 - [1592465] - [ERROR] - com.ircloud.ydh.exchange.job.AbstractJob -OrderServiceTemplate.java(75) -订单插入失败，失败订单：DH-O-20161103-060823SqlMapClient operation; bad SQL grammar []; nested exception is com.ibatis.common.jdbc.exception.NestedSQLException:   
+--- The error occurred in com/ircloud/ydh/exchange/sql/mapper/kis/TKisOrderMapper.xml.  
+--- The error occurred while applying a parameter map.  
+--- Check the KisSaleBill.excuteProcedureBeforeInsert-InlineParameterMap.  
+--- Check the statement (query failed).  
+--- Cause: java.sql.SQLException: 找不到存储过程 'Gte_YDHOrder_MaxID'。
+  2016-10-31 21:03:00 - [1652428] - [ERROR] - com.ircloud.ydh.exchange.job.AbstractJob -OrderServiceTemplate.java(75) -订单插入失败，失败订单：DH-O-20161103-060823SqlMapClient operation; bad SQL grammar []; nested exception is com.ibatis.common.jdbc.exception.NestedSQLException:   
+--- The error occurred in com/ircloud/ydh/exchange/sql/mapper/kis/TKisOrderMapper.xml.  
+--- The error occurred while applying a parameter map.  
+--- Check the KisSaleBill.excuteProcedureBeforeInsert-InlineParameterMap.  
+--- Check the statement (query failed).  
+--- Cause: java.sql.SQLException: 找不到存储过程 'Gte_YDHOrder_MaxID'。
+  2016-10-31 21:04:00 - [1712499] - [ERROR] - com.ircloud.ydh.exchange.job.AbstractJob -OrderServiceTemplate.java(75) -订单插入失败，失败订单：DH-O-20161103-060823SqlMapClient operation; bad SQL grammar []; nested exception is com.ibatis.common.jdbc.exception.NestedSQLException:   
+--- The error occurred in com/ircloud/ydh/exchange/sql/mapper/kis/TKisOrderMapper.xml.  
+--- The error occurred while applying a parameter map.  
+--- Check the KisSaleBill.excuteProcedureBeforeInsert-InlineParameterMap.  
+--- Check the statement (query failed).  
+--- Cause: java.sql.SQLException: 找不到存储过程 'Gte_YDHOrder_MaxID'。
+  2016-10-31 21:05:00 - [1772372] - [ERROR] - com.ircloud.ydh.exchange.job.AbstractJob -OrderServiceTemplate.java(75) -订单插入失败，失败订单：DH-O-20161103-060823SqlMapClient operation; bad SQL grammar []; nested exception is com.ibatis.common.jdbc.exception.NestedSQLException:   
+--- The error occurred in com/ircloud/ydh/exchange/sql/mapper/kis/TKisOrderMapper.xml.  
+--- The error occurred while applying a parameter map.  
+--- Check the KisSaleBill.excuteProcedureBeforeInsert-InlineParameterMap.  
+--- Check the statement (query failed).  
+--- Cause: java.sql.SQLException: 找不到存储过程 'Gte_YDHOrder_MaxID'。
+  2016-10-31 21:06:00 - [1832383] - [ERROR] - com.ircloud.ydh.exchange.job.AbstractJob -OrderServiceTemplate.java(75) -订单插入失败，失败订单：DH-O-20161103-060823SqlMapClient operation; bad SQL grammar []; nested exception is com.ibatis.common.jdbc.exception.NestedSQLException:   
+--- The error occurred in com/ircloud/ydh/exchange/sql/mapper/kis/TKisOrderMapper.xml.  
+--- The error occurred while applying a parameter map.  
+--- Check the KisSaleBill.excuteProcedureBeforeInsert-InlineParameterMap.  
+--- Check the statement (query failed).  
+--- Cause: java.sql.SQLException: 找不到存储过程 'Gte_YDHOrder_MaxID'。
+  2016-10-31 21:07:00 - [1892535] - [ERROR] - com.ircloud.ydh.exchange.job.AbstractJob -OrderServiceTemplate.java(75) -订单插入失败，失败订单：DH-O-20161103-060823SqlMapClient operation; bad SQL grammar []; nested exception is com.ibatis.common.jdbc.exception.NestedSQLException:   
+--- The error occurred in com/ircloud/ydh/exchange/sql/mapper/kis/TKisOrderMapper.xml.  
+--- The error occurred while applying a parameter map.  
+--- Check the KisSaleBill.excuteProcedureBeforeInsert-InlineParameterMap.  
+--- Check the statement (query failed).  
+--- Cause: java.sql.SQLException: 找不到存储过程 'Gte_YDHOrder_MaxID'。
+  2016-10-31 21:08:00 - [1952455] - [ERROR] - com.ircloud.ydh.exchange.job.AbstractJob -OrderServiceTemplate.java(75) -订单插入失败，失败订单：DH-O-20161103-060823SqlMapClient operation; bad SQL grammar []; nested exception is com.ibatis.common.jdbc.exception.NestedSQLException:   
+--- The error occurred in com/ircloud/ydh/exchange/sql/mapper/kis/TKisOrderMapper.xml.  
+--- The error occurred while applying a parameter map.  
+--- Check the KisSaleBill.excuteProcedureBeforeInsert-InlineParameterMap.  
+--- Check the statement (query failed).  
+--- Cause: java.sql.SQLException: 找不到存储过程 'Gte_YDHOrder_MaxID'。
+  2016-10-31 21:09:00 - [2012492] - [ERROR] - com.ircloud.ydh.exchange.job.AbstractJob -OrderServiceTemplate.java(75) -订单插入失败，失败订单：DH-O-20161103-060823SqlMapClient operation; bad SQL grammar []; nested exception is com.ibatis.common.jdbc.exception.NestedSQLException:   
+--- The error occurred in com/ircloud/ydh/exchange/sql/mapper/kis/TKisOrderMapper.xml.  
+--- The error occurred while applying a parameter map.  
+--- Check the KisSaleBill.excuteProcedureBeforeInsert-InlineParameterMap.  
+--- Check the statement (query failed).  
+--- Cause: java.sql.SQLException: 对象名 'YDH_Max_OrderID' 无效。
+  2016-10-31 21:10:00 - [2072501] - [ERROR] - com.ircloud.ydh.exchange.job.AbstractJob -OrderServiceTemplate.java(75) -订单插入失败，失败订单：DH-O-20161103-060823SqlMapClient operation; bad SQL grammar []; nested exception is com.ibatis.common.jdbc.exception.NestedSQLException:   
+--- The error occurred in com/ircloud/ydh/exchange/sql/mapper/kis/TKisOrderMapper.xml.  
+--- The error occurred while applying a parameter map.  
+--- Check the KisSaleBill.excuteProcedureBeforeInsert-InlineParameterMap.  
+--- Check the statement (query failed).  
+--- Cause: java.sql.SQLException: 对象名 'YDH_Max_OrderID' 无效。
+  2016-10-31 21:11:00 - [2132620] - [ERROR] - com.ircloud.ydh.exchange.job.AbstractJob -OrderServiceTemplate.java(75) -订单插入失败，失败订单：DH-O-20161103-060823SqlMapClient operation; bad SQL grammar []; nested exception is com.ibatis.common.jdbc.exception.NestedSQLException:   
+--- The error occurred in com/ircloud/ydh/exchange/sql/mapper/kis/TKisOrderMapper.xml.  
+--- The error occurred while applying a parameter map.  
+--- Check the KisSaleBill.excuteProcedureBeforeInsert-InlineParameterMap.  
+--- Check the statement (query failed).  
+--- Cause: java.sql.SQLException: 数据库中已存在名为 'YDH_Max_OrderID' 的对象。
+  2016-10-31 21:12:00 - [2192567] - [ERROR] - com.ircloud.ydh.exchange.job.AbstractJob -OrderServiceTemplate.java(75) -订单插入失败，失败订单：DH-O-20161103-060823SqlMapClient operation; bad SQL grammar []; nested exception is com.ibatis.common.jdbc.exception.NestedSQLException:   
+--- The error occurred in com/ircloud/ydh/exchange/sql/mapper/kis/TKisOrderMapper.xml.  
+--- The error occurred while applying a parameter map.  
+--- Check the KisSaleBill.excuteProcedureBeforeInsert-InlineParameterMap.  
+--- Check the statement (query failed).  
+--- Cause: java.sql.SQLException: 数据库中已存在名为 'YDH_Max_OrderID' 的对象。
+  2016-10-31 21:13:00 - [2252783] - [ERROR] - com.ircloud.ydh.exchange.job.AbstractJob -OrderServiceTemplate.java(75) -订单插入失败，失败订单：DH-O-20161103-060823SqlMapClient operation; bad SQL grammar []; nested exception is com.ibatis.common.jdbc.exception.NestedSQLException:   
+--- The error occurred in com/ircloud/ydh/exchange/sql/mapper/kis/TKisOrderMapper.xml.  
+--- The error occurred while applying a parameter map.  
+--- Check the KisSaleBill.excuteProcedureBeforeInsert-InlineParameterMap.  
+--- Check the statement (query failed).  
+--- Cause: java.sql.SQLException: 数据库中已存在名为 'YDH_Max_OrderID' 的对象。
+  2016-10-31 21:14:00 - [2312606] - [ERROR] - com.ircloud.ydh.exchange.job.AbstractJob -OrderServiceTemplate.java(75) -订单插入失败，失败订单：DH-O-20161103-060823SqlMapClient operation; bad SQL grammar []; nested exception is com.ibatis.common.jdbc.exception.NestedSQLException:   
+--- The error occurred in com/ircloud/ydh/exchange/sql/mapper/kis/TKisOrderMapper.xml.  
+--- The error occurred while applying a parameter map.  
+--- Check the KisSaleBill.excuteProcedureBeforeInsert-InlineParameterMap.  
+--- Check the statement (query failed).  
+--- Cause: java.sql.SQLException: 数据库中已存在名为 'YDH_Max_OrderID' 的对象。
+  2016-10-31 21:15:00 - [2372568] - [ERROR] - com.ircloud.ydh.exchange.job.AbstractJob -OrderServiceTemplate.java(75) -订单插入失败，失败订单：DH-O-20161103-060823SqlMapClient operation; bad SQL grammar []; nested exception is com.ibatis.common.jdbc.exception.NestedSQLException:   
+--- The error occurred in com/ircloud/ydh/exchange/sql/mapper/kis/TKisOrderMapper.xml.  
+--- The error occurred while applying a parameter map.  
+--- Check the KisSaleBill.excuteProcedureBeforeInsert-InlineParameterMap.  
+--- Check the statement (query failed).  
+--- Cause: java.sql.SQLException: 对象名 'YDH_Max_OrderID' 无效。
+  2016-10-31 21:16:01 - [13817] - [ERROR] - com.ircloud.ydh.exchange.job.AbstractJob -OrderServiceTemplate.java(75) -订单插入失败，失败订单：DH-O-20161103-060823SqlMapClient operation; bad SQL grammar []; nested exception is com.ibatis.common.jdbc.exception.NestedSQLException:   
+--- The error occurred in com/ircloud/ydh/exchange/sql/mapper/kis/TKisOrderMapper.xml.  
+--- The error occurred while applying a parameter map.  
+--- Check the KisSaleBill.excuteProcedureBeforeInsert-InlineParameterMap.  
+--- Check the statement (query failed).  
+--- Cause: java.sql.SQLException: 对象名 'YDH_Max_OrderID' 无效。
+  2016-10-31 21:17:00 - [72837] - [ERROR] - com.ircloud.ydh.exchange.job.AbstractJob -OrderServiceTemplate.java(75) -订单插入失败，失败订单：DH-O-20161103-060823SqlMapClient operation; bad SQL grammar []; nested exception is com.ibatis.common.jdbc.exception.NestedSQLException:   
+--- The error occurred in com/ircloud/ydh/exchange/sql/mapper/kis/TKisOrderMapper.xml.  
+--- The error occurred while applying a parameter map.  
+--- Check the KisSaleBill.excuteProcedureBeforeInsert-InlineParameterMap.  
+--- Check the statement (query failed).  
+--- Cause: java.sql.SQLException: 对象名 'YDH_Max_OrderID' 无效。
+  2016-10-31 21:18:00 - [132804] - [ERROR] - com.ircloud.ydh.exchange.job.AbstractJob -OrderServiceTemplate.java(75) -订单插入失败，失败订单：DH-O-20161103-060823SqlMapClient operation; bad SQL grammar []; nested exception is com.ibatis.common.jdbc.exception.NestedSQLException:   
+--- The error occurred in com/ircloud/ydh/exchange/sql/mapper/kis/TKisOrderMapper.xml.  
+--- The error occurred while applying a parameter map.  
+--- Check the KisSaleBill.excuteProcedureBeforeInsert-InlineParameterMap.  
+--- Check the statement (query failed).  
+--- Cause: java.sql.SQLException: 数据库中已存在名为 'YDH_Max_OrderID' 的对象。
+  2016-10-31 21:19:01 - [49442] - [ERROR] - com.ircloud.ydh.exchange.job.AbstractJob -OrderServiceTemplate.java(75) -订单插入失败，失败订单：DH-O-20161103-060823SqlMapClient operation; bad SQL grammar []; nested exception is com.ibatis.common.jdbc.exception.NestedSQLException:   
+--- The error occurred in com/ircloud/ydh/exchange/sql/mapper/kis/TKisOrderMapper.xml.  
+--- The error occurred while applying a parameter map.  
+--- Check the KisSaleBill.excuteProcedureBeforeInsert-InlineParameterMap.  
+--- Check the statement (query failed).  
+--- Cause: java.sql.SQLException: 数据库中已存在名为 'YDH_Max_OrderID' 的对象。
+  2016-10-31 21:20:00 - [108272] - [ERROR] - com.ircloud.ydh.exchange.job.AbstractJob -OrderServiceTemplate.java(75) -订单插入失败，失败订单：DH-O-20161103-060823SqlMapClient operation; bad SQL grammar []; nested exception is com.ibatis.common.jdbc.exception.NestedSQLException:   
+--- The error occurred in com/ircloud/ydh/exchange/sql/mapper/kis/TKisOrderMapper.xml.  
+--- The error occurred while applying a parameter map.  
+--- Check the KisSaleBill.excuteProcedureBeforeInsert-InlineParameterMap.  
+--- Check the statement (query failed).  
+--- Cause: java.sql.SQLException: 数据库中已存在名为 'YDH_Max_OrderID' 的对象。
+  2016-10-31 21:21:00 - [168231] - [ERROR] - com.ircloud.ydh.exchange.job.AbstractJob -OrderServiceTemplate.java(75) -订单插入失败，失败订单：DH-O-20161103-060823SqlMapClient operation; bad SQL grammar []; nested exception is com.ibatis.common.jdbc.exception.NestedSQLException:   
+--- The error occurred in com/ircloud/ydh/exchange/sql/mapper/kis/TKisOrderMapper.xml.  
+--- The error occurred while applying a parameter map.  
+--- Check the KisSaleBill.excuteProcedureBeforeInsert-InlineParameterMap.  
+--- Check the statement (query failed).  
+--- Cause: java.sql.SQLException: 数据库中已存在名为 'YDH_Max_OrderID' 的对象。
+  2016-10-31 21:22:00 - [228259] - [ERROR] - com.ircloud.ydh.exchange.job.AbstractJob -OrderServiceTemplate.java(75) -订单插入失败，失败订单：DH-O-20161103-060823SqlMapClient operation; bad SQL grammar []; nested exception is com.ibatis.common.jdbc.exception.NestedSQLException:   
+--- The error occurred in com/ircloud/ydh/exchange/sql/mapper/kis/TKisOrderMapper.xml.  
+--- The error occurred while applying a parameter map.  
+--- Check the KisSaleBill.excuteProcedureBeforeInsert-InlineParameterMap.  
+--- Check the statement (query failed).  
+--- Cause: java.sql.SQLException: 数据库中已存在名为 'YDH_Max_OrderID' 的对象。
+  2016-10-31 21:39:00 - [1247987] - [ERROR] - com.ircloud.ydh.exchange.job.AbstractJob -InventoryJob.java(85) -库存同步失败：Connection reset
+  2016-10-31 22:21:00 - [3768004] - [ERROR] - com.ircloud.ydh.exchange.job.AbstractJob -InventoryJob.java(85) -库存同步失败：502:YDH is down or being upgraded.
+  2016-10-31 23:03:00 - [6288010] - [ERROR] - com.ircloud.ydh.exchange.job.AbstractJob -InventoryJob.java(85) -库存同步失败：502:YDH is down or being upgraded.
+  2016-10-31 23:07:00 - [6528342] - [ERROR] - com.ircloud.ydh.exchange.job.AbstractJob -InventoryJob.java(85) -库存同步失败：The target server failed to respond
+  2016-10-31 23:31:00 - [7968027] - [ERROR] - com.ircloud.ydh.exchange.job.AbstractJob -InventoryJob.java(85) -库存同步失败：502:YDH is down or being upgraded.
+  2016-10-31 23:46:00 - [8868017] - [ERROR] - com.ircloud.ydh.exchange.job.AbstractJob -InventoryJob.java(85) -库存同步失败：502:YDH is down or being upgraded.
+  2016-10-31 23:58:00 - [9588010] - [ERROR] - com.ircloud.ydh.exchange.job.AbstractJob -InventoryJob.java(85) -库存同步失败：502:YDH is down or being upgraded.
+  2016-11-01 00:55:00 - [13008008] - [ERROR] - com.ircloud.ydh.exchange.job.AbstractJob -InventoryJob.java(85) -库存同步失败：502:YDH is down or being upgraded.
+  2016-11-01 00:58:00 - [13188017] - [ERROR] - com.ircloud.ydh.exchange.job.AbstractJob -InventoryJob.java(85) -库存同步失败：502:YDH is down or being upgraded.
+  2016-11-01 01:17:00 - [14328058] - [ERROR] - com.ircloud.ydh.exchange.job.AbstractJob -InventoryJob.java(85) -库存同步失败：502:YDH is down or being upgraded.
+  2016-11-01 02:41:00 - [19368040] - [ERROR] - com.ircloud.ydh.exchange.job.AbstractJob -InventoryJob.java(85) -库存同步失败：502:YDH is down or being upgraded.
+  2016-11-01 02:47:00 - [19728030] - [ERROR] - com.ircloud.ydh.exchange.job.AbstractJob -InventoryJob.java(85) -库存同步失败：502:YDH is down or being upgraded.
+  2016-11-01 03:20:00 - [21708006] - [ERROR] - com.ircloud.ydh.exchange.job.AbstractJob -InventoryJob.java(85) -库存同步失败：502:YDH is down or being upgraded.
+  2016-11-01 03:21:00 - [21768004] - [ERROR] - com.ircloud.ydh.exchange.job.AbstractJob -InventoryJob.java(85) -库存同步失败：502:YDH is down or being upgraded.
+  2016-11-01 04:35:00 - [26208007] - [ERROR] - com.ircloud.ydh.exchange.job.AbstractJob -InventoryJob.java(85) -库存同步失败：502:YDH is down or being upgraded.
+  2016-11-01 04:37:00 - [26328005] - [ERROR] - com.ircloud.ydh.exchange.job.AbstractJob -InventoryJob.java(85) -库存同步失败：502:YDH is down or being upgraded.
+  2016-11-01 04:43:00 - [26688011] - [ERROR] - com.ircloud.ydh.exchange.job.AbstractJob -InventoryJob.java(85) -库存同步失败：502:YDH is down or being upgraded.
+  2016-11-01 04:46:00 - [26868014] - [ERROR] - com.ircloud.ydh.exchange.job.AbstractJob -InventoryJob.java(85) -库存同步失败：502:YDH is down or being upgraded.
+  2016-11-01 04:50:00 - [27108002] - [ERROR] - com.ircloud.ydh.exchange.job.AbstractJob -InventoryJob.java(85) -库存同步失败：502:YDH is down or being upgraded.
+  2016-11-01 05:01:00 - [27768032] - [ERROR] - com.ircloud.ydh.exchange.job.AbstractJob -InventoryJob.java(85) -库存同步失败：502:YDH is down or being upgraded.
+  2016-11-01 05:15:00 - [28608029] - [ERROR] - com.ircloud.ydh.exchange.job.AbstractJob -InventoryJob.java(85) -库存同步失败：502:YDH is down or being upgraded.
+  2016-11-01 05:18:00 - [28788024] - [ERROR] - com.ircloud.ydh.exchange.job.AbstractJob -InventoryJob.java(85) -库存同步失败：502:YDH is down or being upgraded.
+  2016-11-01 05:39:00 - [30048031] - [ERROR] - com.ircloud.ydh.exchange.job.AbstractJob -InventoryJob.java(85) -库存同步失败：502:YDH is down or being upgraded.
+  2016-11-01 05:44:00 - [30348053] - [ERROR] - com.ircloud.ydh.exchange.job.AbstractJob -InventoryJob.java(85) -库存同步失败：502:YDH is down or being upgraded.
+  2016-11-01 06:01:00 - [31368212] - [ERROR] - com.ircloud.ydh.exchange.job.AbstractJob -InventoryJob.java(85) -库存同步失败：502:YDH is down or being upgraded.
+  2016-11-01 06:24:00 - [32748031] - [ERROR] - com.ircloud.ydh.exchange.job.AbstractJob -InventoryJob.java(85) -库存同步失败：502:YDH is down or being upgraded.
+  2016-11-01 06:28:00 - [32988034] - [ERROR] - com.ircloud.ydh.exchange.job.AbstractJob -InventoryJob.java(85) -库存同步失败：The target server failed to respond
+  2016-11-01 06:35:00 - [33408030] - [ERROR] - com.ircloud.ydh.exchange.job.AbstractJob -InventoryJob.java(85) -库存同步失败：502:YDH is down or being upgraded.
+  2016-11-01 06:40:00 - [33708014] - [ERROR] - com.ircloud.ydh.exchange.job.AbstractJob -InventoryJob.java(85) -库存同步失败：502:YDH is down or being upgraded.
+  2016-11-01 07:07:00 - [35328017] - [ERROR] - com.ircloud.ydh.exchange.job.AbstractJob -InventoryJob.java(85) -库存同步失败：502:YDH is down or being upgraded.
+  2016-11-01 07:14:00 - [35748030] - [ERROR] - com.ircloud.ydh.exchange.job.AbstractJob -InventoryJob.java(85) -库存同步失败：502:YDH is down or being upgraded.
+  2016-11-01 07:23:00 - [36288029] - [ERROR] - com.ircloud.ydh.exchange.job.AbstractJob -InventoryJob.java(85) -库存同步失败：502:YDH is down or being upgraded.
+  2016-11-01 07:35:00 - [37008024] - [ERROR] - com.ircloud.ydh.exchange.job.AbstractJob -InventoryJob.java(85) -库存同步失败：502:YDH is down or being upgraded.
+  2016-11-01 07:45:00 - [37608030] - [ERROR] - com.ircloud.ydh.exchange.job.AbstractJob -InventoryJob.java(85) -库存同步失败：502:YDH is down or being upgraded.
+  2016-11-01 07:56:00 - [38268030] - [ERROR] - com.ircloud.ydh.exchange.job.AbstractJob -InventoryJob.java(85) -库存同步失败：502:YDH is down or being upgraded.
+  2016-11-05 09:19:00 - [388848034] - [ERROR] - com.ircloud.ydh.exchange.job.AbstractJob -InventoryJob.java(85) -库存同步失败：502:YDH is down or being upgraded.
+  2016-11-05 10:06:00 - [391668104] - [ERROR] - com.ircloud.ydh.exchange.job.AbstractJob -InventoryJob.java(85) -库存同步失败：502:YDH is down or being upgraded.
+  2016-11-05 10:45:00 - [394008065] - [ERROR] - com.ircloud.ydh.exchange.job.AbstractJob -InventoryJob.java(85) -库存同步失败：502:YDH is down or being upgraded.
+  2016-11-05 10:52:00 - [394428058] - [ERROR] - com.ircloud.ydh.exchange.job.AbstractJob -InventoryJob.java(85) -库存同步失败：The target server failed to respond
+  

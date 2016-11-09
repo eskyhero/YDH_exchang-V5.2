@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE sqlMap PUBLIC "-//ibatis.apache.org//DTD SQL Map 2.0//EN"
+        "http://ibatis.apache.org/dtd/sql-map-2.dtd">
+
+
+<sqlMap namespace="KisCustomer">
+
+    <typeAlias alias="Customer" type="com.ircloud.ydh.sdk4j.model.Customer"/>
+    
+    <resultMap id="BaseResultMap" class="Customer" >
+	   	<result column="code"             property="code"            jdbcType="VARCHAR" />
+	    <result column="name"             property="name"            jdbcType="VARCHAR" />
+	    <result column="contactor"        property="contactor"       jdbcType="VARCHAR" />
+	    <result column="address"          property="address"     	 jdbcType="VARCHAR"/>    
+	    <result column="phone"    		  property="phone"   		 jdbcType="VARCHAR"/>
+	    <result column="mobile"           property="mobile"   		 jdbcType="VARCHAR"/>
+	    <result column="email"     		  property="email"    		 jdbcType="VARCHAR" /> 
+	    <result column="bank"     		  property="bank"    		 jdbcType="VARCHAR" /> 
+	    <result column="bankName"         property="bankName"     	 jdbcType="VARCHAR" /> 
+	    <result column="bankAccount"      property="bankAccount"     jdbcType="VARCHAR" /> 
+	    <result column="invoice"      	  property="invoice"     	 jdbcType="VARCHAR" />
+	    <result column="taxNum"      	  property="taxNum"    		 jdbcType="VARCHAR" />
+    </resultMap>
+    
+    <resultMap id="BaseResultMapIncludeId" class="Customer" >
+        <result column="id"               property="id"              jdbcType="VARCHAR" />
+	   	<result column="code"             property="code"            jdbcType="VARCHAR" />
+	    <result column="name"             property="name"            jdbcType="VARCHAR" />
+	    <result column="contactor"        property="contactor"       jdbcType="VARCHAR" />
+	    <result column="address"          property="address"     	 jdbcType="VARCHAR"/>    
+	    <result column="phone"    		  property="phone"   		 jdbcType="VARCHAR"/>
+	    <result column="mobile"           property="mobile"   		 jdbcType="VARCHAR"/>
+	    <result column="email"    		  property="email"    		 jdbcType="VARCHAR" />
+	    <result column="bank"     		  property="bank"    		 jdbcType="VARCHAR" /> 
+	    <result column="bankName"         property="bankName"     	 jdbcType="VARCHAR" /> 
+	    <result column="bankAccount"      property="bankAccount"     jdbcType="VARCHAR" /> 
+	    <result column="invoice"      	  property="invoice"     	 jdbcType="VARCHAR" />
+	    <result column="taxNum"      	  property="taxNum"    		 jdbcType="VARCHAR" />
+    </resultMap>
+       
+    <resultMap id="existedCustomerMap" class="Customer" >
+        <result column="id"               property="id"              jdbcType="VARCHAR" />
+	   	<result column="code"             property="code"            jdbcType="VARCHAR" />
+	    <result column="name"             property="name"            jdbcType="VARCHAR" />
+    </resultMap>
+    
+    <select id="findExistedCustomers" resultMap="existedCustomerMap">
+    	select custid as id,custcode as code,custname as name from uploadCust 
+    	where custcode in (
+    	select custcode from uploadCust 
+    	group by custcode having count(custcode) > 1)
+    </select>   
+       
+    <select id="findNewCustomers" resultMap="BaseResultMap">
+		select top 300
+			t.FNumber as code,
+			t.FName as name,
+			t.FAddress as address,
+			t.FContact as contactor,
+			isnull(t.FPhone, '') as mobile,
+			isnull(t.FMobilePhone, '') as phone,
+			isnull(t.FEmail, '') as email,
+			t.FBank as bank,
+			t.FName as bankName,
+			t.FAccount as bankAccount,
+			t.FName as invoice,
+			t.FTaxNum as taxNum
+		from T_Organization t
+		left join uploadCustflag f on f.custcode = t.FNumber
+		where t.FDeleted = 0 and f.flag = 0
+    </select>
+
+    <insert id="insertReturnedCustomer" parameterClass="Customer">
+         insert into uploadCust(ydhcustid, custcode, custname, ydhstatus) values(#id#, #code#, #name#, #userStatus#)
+    </insert>
+    
+    <select id="findModifiedCustomer" resultMap="BaseResultMapIncludeId">
+		select 
+			t.FNumber as code,
+			t.FName as name,
+			t.FAddress as address,
+			t.FContact as contactor,
+			isnull(t.FPhone, '') as mobile,
+			isnull(t.FMobilePhone, '') as phone,
+			isnull(t.FEmail, '') as email,
+			t.FBank as bank,
+			t.FName as bankName,
+			t.FAccount as bankAccount,
+			t.FName as invoice,
+			t.FTaxNum as taxNum
+		from T_Organization t
+		inner join uploadCust u on t.FNumber = u.custcode
+		where t.FNumber in(
+			select custcode from uploadCustflag where flag = 1
+		)
+    </select>
+    
+    <update id="cleanReturnedCustomers">
+       	delete from uploadCust 
+		where custcode in (
+			select custcode from uploadCustflag where flag = 2
+		)  
+    </update>
+
+    <update id="modifySyncState"  parameterClass="Customer">
+    	update uploadCustflag set flag = 2 where custcode = #code#
+    </update>
+</sqlMap>

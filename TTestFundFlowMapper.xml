@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE sqlMap PUBLIC "-//ibatis.apache.org//DTD SQL Map 2.0//EN"
+        "http://ibatis.apache.org/dtd/sql-map-2.dtd">
+
+<sqlMap namespace="TestFundFlow">
+
+    <typeAlias alias="FundFlow" type="com.ircloud.ydh.sdk4j.model.FundFlow"/>
+    
+    <resultMap id="BaseResultMap" class="FundFlow" >
+	   	<result column="customerId"    property="customerId"   jdbcType="BIGINT" />
+	   	<result column="fundAccountAttributeCode"              property="fundAccountAttributeCode"         jdbcType="VARCHAR" />
+	    <result column="money"         property="money"        jdbcType="DOUBLE" />
+	    <result column="flowType"      property="flowType"     jdbcType="VARCHAR"/>    
+	    <result column="flowSignId"    property="flowSignId"   jdbcType="BIGINT"/>
+	    <result column="flowTime"      property="flowTime"     jdbcType="DATE" /> 
+    </resultMap>
+    
+    <resultMap id="BaseResultMapIncludeId" class="FundFlow" >
+<!--    <result column="fid"            property="id"           jdbcType="VARCHAR" /> -->
+	   	<result column="customerId"    property="customerId"   jdbcType="BIGINT" />
+	   	<result column="fundAccountAttributeCode"              property="fundAccountAttributeCode"         jdbcType="VARCHAR" />
+	    <result column="money"         property="money"        jdbcType="DOUBLE" />
+	    <result column="flowType"      property="flowType"     jdbcType="VARCHAR"/>    
+	    <result column="flowSignId"    property="flowSignId"   jdbcType="BIGINT"/>
+	    <result column="flowTime"      property="flowTime"     jdbcType="DATE" />    
+    </resultMap>
+      
+    <sql id="queryColumns">
+    	fcustomerId as customerId,
+    	ffundAccountAttributeCode as fundAccountAttributeCode,
+    	fmoney as money,
+    	fsignType as flowType,
+    	fflowSignId as flowSignId,
+    	fflowTime as flowTime
+    </sql>
+       
+    <select id="findFundFlows" resultMap="BaseResultMap" parameterClass="FundFlow">
+          select <include refid="queryColumns"/> from  t_fund_flow
+          where 
+              fcustomerId = (SELECT fcustomerId FROM t_fund_account WHERE ffundAccountCode = #fundAccountAttributeCode# )  
+              and ffundAccountAttributeCode = #fundAccountAttributeCode# 
+              <!-- 同步起始时间 -->
+              and fflowTime > #flowTime# order by fflowTime asc  <!-- 必须是正序 -->
+    </select>
+    
+    
+</sqlMap>

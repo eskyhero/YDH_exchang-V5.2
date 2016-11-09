@@ -1,0 +1,5 @@
+2016-11-05 10:15:00 - [392208069] - [ INFO] - org.apache.http.impl.client.DefaultHttpClient -DefaultRequestDirector.java(723) -I/O exception (org.apache.http.NoHttpResponseException) caught when processing request: The target server failed to respond
+  2016-11-05 10:15:00 - [392208070] - [ INFO] - org.apache.http.impl.client.DefaultHttpClient -DefaultRequestDirector.java(730) -Retrying request
+  2016-11-05 11:19:01 - [396049034] - [ INFO] - org.apache.http.impl.client.DefaultHttpClient -DefaultRequestDirector.java(723) -I/O exception (java.net.SocketException) caught when processing request: Connection reset
+  2016-11-05 11:19:01 - [396049142] - [ INFO] - org.apache.http.impl.client.DefaultHttpClient -DefaultRequestDirector.java(730) -Retrying request
+  

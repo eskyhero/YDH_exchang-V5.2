@@ -1,0 +1,265 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:aop="http://www.springframework.org/schema/aop" xmlns:tx="http://www.springframework.org/schema/tx"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-3.1.xsd http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.1.xsd http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-3.1.xsd"
+default-lazy-init="true">
+
+ 	<bean id="orderJob" class="com.ircloud.ydh.exchange.job.OrderJob">
+ 	    <property name="businessOperation" ref="${orderBusinessOperation}"/>
+ 	    <property name="observers">
+ 	       <ref bean="controlUI"/>
+ 	    </property>
+ 	    <property name="jobName" value="同步订单"/>
+ 	</bean>
+ 	
+ 	<bean id="customerExistedJob" class="com.ircloud.ydh.exchange.job.CustomerExistedJob">
+ 	    <property name="icustomerService" ref="${customer_service}"/>
+ 	    <property name="observers">
+ 	       <ref bean="controlUI"/>
+ 	    </property>
+ 	    <property name="jobName" value="同步已存在客户信息"/>
+ 	</bean>
+ 	
+ 		
+ 	<bean id="inventoryJob" class="com.ircloud.ydh.exchange.job.InventoryJob">
+ 	    <property name="inventoryService" ref="${inventory_service}"/>
+ 	    <property name="observers">
+ 	       <ref bean="controlUI"/>
+ 	    </property>
+ 	    <property name="jobName" value="同步库存"/>
+ 	</bean>
+ 	
+ 	<bean id="updateGoodsJob" class="com.ircloud.ydh.exchange.job.UpdateGoodsJob">
+ 	    <property name="igoodsService" ref="${igoods_service}"/>
+ 	    <property name="observers">
+ 	       <ref bean="controlUI"/>
+ 	    </property>
+ 	    <property name="jobName" value="同步修改商品"/>
+ 	</bean>
+ 	
+ 	<bean id="goodsExistedJob" class="com.ircloud.ydh.exchange.job.GoodsExistedJob">
+ 	    <property name="igoodsService" ref="${igoods_service}"/>
+ 	    <property name="observers">
+ 	       <ref bean="controlUI"/>
+ 	    </property>
+ 	    <property name="jobName" value="已存在商品同步"/>
+ 	</bean>
+ 	
+ 	<bean id="goodsCreateJob" class="com.ircloud.ydh.exchange.job.GoodsCreateJob">
+ 	    <property name="igoodsService" ref="${igoods_service}"/>
+ 	    <property name="unitPolicy" ref="byGoodsUnitName"/>
+ 	    <property name="typePolicy" ref="byGoodsTypeName"/>
+ 	    <property name="observers">
+ 	       <ref bean="controlUI"/>
+ 	    </property>
+ 	    <property name="jobName" value="同步商品"/>
+ 	</bean>
+ 	
+ 	<bean id="customerCreateJob" class="com.ircloud.ydh.exchange.job.CustomerCreateJob">
+ 	    <property name="icustomerService" ref="${customer_service}"/>
+ 	    <property name="typePolicy" ref="byCustomerTypeName"/>
+ 	    <property name="observers">
+ 	       <ref bean="controlUI"/>
+ 	    </property>
+ 	    <property name="jobName" value="同步客户"/>
+ 	</bean>
+ 	
+ 	<bean id="customerModifiedJob" class="com.ircloud.ydh.exchange.job.CustomerModifiedJob">
+ 	    <property name="icustomerService" ref="${customer_service}"/>
+ 	    <property name="typePolicy" ref="byCustomerTypeName"/>
+ 	    <property name="observers">
+ 	       <ref bean="controlUI"/>
+ 	    </property>
+ 	    <property name="jobName" value="同步客户"/>
+ 	</bean>
+ 	
+ 	<!--<bean id="onetimeLogisticsJob" class="com.ircloud.ydh.exchange.job.OnetimeLogisticsJob" scope="prototype">
+ 	    <property name="ilogisticsService" ref="${logistics_service}"/>
+ 	    <property name="jobName" value="同步出库单"/>
+ 	</bean>
+ 	
+ 	<bean id="demergedLogisticsJob" class="com.ircloud.ydh.exchange.job.DemergedLogisticsJob" scope="prototype">
+ 	    <property name="ilogisticsService" ref="${logistics_service}"/>
+ 	    <property name="jobName" value="同步出库单"/>
+ 	</bean>  -->
+ 	
+ 	<bean class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean" id="goodsJobBean">
+		<property name="targetObject" ref="goodsCreateJob" />
+		<property name="targetMethod" value="execute" />
+		<property name="concurrent" value="false" />
+	</bean>
+
+ 	<bean class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean" id="customerJobBean">
+		<property name="targetObject" ref="customerCreateJob" />
+		<property name="targetMethod" value="execute" />
+		<property name="concurrent" value="false" />
+	</bean>
+	
+	<bean class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean" id="customerExistedJobBean">
+		<property name="targetObject" ref="customerExistedJob" />
+		<property name="targetMethod" value="execute" />
+		<property name="concurrent" value="false" />
+	</bean>
+	
+	<bean class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean" id="modifyCustomerJobBean">
+		<property name="targetObject" ref="customerModifiedJob" />
+		<property name="targetMethod" value="execute" />
+		<property name="concurrent" value="false" />
+	</bean>
+	
+	<bean class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean" id="existedGoodsJobBean">
+		<property name="targetObject" ref="goodsExistedJob" />
+		<property name="targetMethod" value="execute" />
+		<property name="concurrent" value="false" />
+	</bean>
+	
+	<bean class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean" id="updateGoodsJobBean">
+		<property name="targetObject" ref="updateGoodsJob" />
+		<property name="targetMethod" value="execute" />
+		<property name="concurrent" value="false" />
+	</bean>
+ 	
+ 	<bean class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean" id="orderJobBean">
+		<property name="targetObject" ref="orderJob" />
+		<property name="targetMethod" value="execute" />
+		<property name="concurrent" value="false" />
+	</bean>
+ 	
+ 	<!--<bean class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean" id="onetimeLogisticsJobBean">
+		<property name="targetObject" ref="onetimeLogisticsJob" />
+		<property name="targetMethod" value="execute" />
+		<property name="concurrent" value="false" />
+	</bean>
+	
+	<bean class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean" id="demergedLogisticsJobBean">
+		<property name="targetObject" ref="demergedLogisticsJob" />
+		<property name="targetMethod" value="execute" />
+		<property name="concurrent" value="false" />
+	</bean>  -->
+	
+	<bean class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean" id="inventoryJobBean">
+		<property name="targetObject" ref="inventoryJob" />
+		<property name="targetMethod" value="execute" />
+		<property name="concurrent" value="false" />
+	</bean>
+	
+	<bean class="org.springframework.scheduling.quartz.CronTriggerBean" id="goodsJobTrigger">
+		<property name="jobDetail">
+			<ref bean="goodsJobBean" />
+		</property>
+		<property name="cronExpression">
+			<value>${erp_to_goods} ?</value>
+		</property>
+	</bean>
+	
+	<bean class="org.springframework.scheduling.quartz.CronTriggerBean" id="cusomerJobTrigger">
+		<property name="jobDetail">
+			<ref bean="customerJobBean" />
+		</property>
+		<property name="cronExpression">
+			<value>${erp_to_customer} ?</value>
+		</property>
+	</bean>
+	
+    <bean class="org.springframework.scheduling.quartz.CronTriggerBean" id="customerExistedTrigger">
+		<property name="jobDetail">
+			<ref bean="customerExistedJobBean" />
+		</property>
+		<property name="cronExpression">
+			<value>${existed_customers_to_erp} ?</value>
+		</property>
+	</bean>
+	
+    <bean class="org.springframework.scheduling.quartz.CronTriggerBean" id="cusomerModifyJobTrigger">
+		<property name="jobDetail">
+			<ref bean="modifyCustomerJobBean" />
+		</property>
+		<property name="cronExpression">
+			<value>${erp_to_modified_customer} ?</value>
+		</property>
+	</bean>
+	
+    <bean class="org.springframework.scheduling.quartz.CronTriggerBean" id="existedGoodsJobTrigger">
+		<property name="jobDetail">
+			<ref bean="existedGoodsJobBean" />
+		</property>
+		<property name="cronExpression">
+			<value>${existed_goods_to_erp} ?</value>
+		</property>
+	</bean>
+		
+	<bean class="org.springframework.scheduling.quartz.CronTriggerBean" id="updateGoodsTrigger">
+		<property name="jobDetail">
+			<ref bean="updateGoodsJobBean" />
+		</property>
+		<property name="cronExpression">
+			<value>${erp_to_modified_goods} ?</value>
+		</property>
+	</bean>
+	
+    <!--<bean class="org.springframework.scheduling.quartz.CronTriggerBean" id="onetimeLogisticsJobTrigger">
+		<property name="jobDetail">
+			<ref bean="onetimeLogisticsJobBean" />
+		</property>
+		<property name="cronExpression">
+			<value>${onetime_logistics_to_erp} ?</value>
+		</property>
+	</bean>
+	
+	<bean class="org.springframework.scheduling.quartz.CronTriggerBean" id="demergedLogisticsJobTrigger">
+		<property name="jobDetail">
+			<ref bean="demergedLogisticsJobBean" />
+		</property>
+		<property name="cronExpression">
+			<value>${demerged_logistics_to_erp} ?</value>
+		</property>
+	</bean>  -->
+	
+	<bean class="org.springframework.scheduling.quartz.CronTriggerBean" id="orderJobTrigger">
+		<property name="jobDetail">
+			<ref bean="orderJobBean" />
+		</property>
+		<property name="cronExpression">
+			<value>${saleBill_to_erp} ?</value>
+		</property>
+	</bean>
+	
+	<bean class="org.springframework.scheduling.quartz.CronTriggerBean" id="inventoryJobTrigger">
+		<property name="jobDetail">
+			<ref bean="inventoryJobBean" />
+		</property>
+		<property name="cronExpression">
+			<value>${erp_to_inventory} ?</value>
+		</property>
+	</bean>
+	
+    <bean class="org.springframework.scheduling.quartz.SchedulerFactoryBean" lazy-init="false" id="scheduler">
+	    <property name="triggers">
+			<list>
+				<!-- 订单同步 -->
+				<!--<ref bean="orderJobTrigger" />-->
+				
+				<!-- 库存同步 -->
+				<ref bean="inventoryJobTrigger"/>
+				
+				<!-- 商品同步 -->
+				<ref bean="goodsJobTrigger" />
+				<ref bean="existedGoodsJobTrigger"/>
+				<ref bean="updateGoodsTrigger" />
+				
+				<!--客户同步 -->
+				<ref bean="cusomerJobTrigger" />
+				<ref bean="cusomerModifyJobTrigger" />  
+				<ref bean="customerExistedTrigger" />
+				
+				<!-- 物流同步 -->
+				<!--<ref bean="onetimeLogisticsJobTrigger" />
+				<ref bean="demergedLogisticsJobTrigger" />  -->
+				
+				
+			</list>
+		</property>
+	</bean>
+	
+</beans>
